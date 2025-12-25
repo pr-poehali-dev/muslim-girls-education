@@ -19,6 +19,14 @@ const Index = () => {
   });
   const [hasAnimated, setHasAnimated] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<{title: string, image: string} | null>(null);
+
+  const certificates = [
+    { title: 'Мединский курс', subtitle: 'Сертификат об окончании 1 тома', image: '/placeholder-certificate-1.jpg', icon: 'Award', color: 'primary' },
+    { title: 'Байна Ядайк', subtitle: 'Сертификат об окончании программы', image: '/placeholder-certificate-2.jpg', icon: 'BookOpen', color: 'secondary' },
+    { title: 'Университет Корана', subtitle: 'Обучение у шейхи Умм Малик', image: '/placeholder-certificate-3.jpg', icon: 'GraduationCap', color: 'primary' },
+    { title: 'Институт Дироя', subtitle: 'Продолжающееся обучение', image: '/placeholder-certificate-4.jpg', icon: 'Library', color: 'secondary' }
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,6 +74,14 @@ const Index = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Форма отправлена:', formData);
+  };
+
+  const openCertificate = (title: string, image: string) => {
+    setSelectedCertificate({ title, image });
+  };
+
+  const closeCertificate = () => {
+    setSelectedCertificate(null);
   };
 
   return (
@@ -280,75 +296,59 @@ const Index = () => {
           <div className="max-w-4xl mx-auto mt-12">
             <h3 className="text-3xl font-serif font-bold text-center mb-8 text-foreground">Сертификаты и достижения</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8 relative">
-                    <img 
-                      src="/placeholder-certificate-1.jpg" 
-                      alt="Мединский курс" 
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
-                    <Icon name="Award" className="text-primary mb-4" size={48} />
-                    <h4 className="text-xl font-semibold text-center mb-2">Мединский курс</h4>
-                    <p className="text-muted-foreground text-center text-sm">Сертификат об окончании 1 тома</p>
-                    <p className="text-xs text-primary mt-4 opacity-70">Нажмите для загрузки фото</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8 relative">
-                    <img 
-                      src="/placeholder-certificate-2.jpg" 
-                      alt="Байна Ядайк" 
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
-                    <Icon name="BookOpen" className="text-secondary mb-4" size={48} />
-                    <h4 className="text-xl font-semibold text-center mb-2">Байна Ядайк</h4>
-                    <p className="text-muted-foreground text-center text-sm">Сертификат об окончании программы</p>
-                    <p className="text-xs text-secondary mt-4 opacity-70">Нажмите для загрузки фото</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8 relative">
-                    <img 
-                      src="/placeholder-certificate-3.jpg" 
-                      alt="Университет Корана" 
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
-                    <Icon name="GraduationCap" className="text-primary mb-4" size={48} />
-                    <h4 className="text-xl font-semibold text-center mb-2">Университет Корана</h4>
-                    <p className="text-muted-foreground text-center text-sm">Обучение у шейхи Умм Малик</p>
-                    <p className="text-xs text-primary mt-4 opacity-70">Нажмите для загрузки фото</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8 relative">
-                    <img 
-                      src="/placeholder-certificate-4.jpg" 
-                      alt="Институт Дироя" 
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
-                      onError={(e) => e.currentTarget.style.display = 'none'}
-                    />
-                    <Icon name="Library" className="text-secondary mb-4" size={48} />
-                    <h4 className="text-xl font-semibold text-center mb-2">Институт Дироя</h4>
-                    <p className="text-muted-foreground text-center text-sm">Продолжающееся обучение</p>
-                    <p className="text-xs text-secondary mt-4 opacity-70">Нажмите для загрузки фото</p>
-                  </div>
-                </CardContent>
-              </Card>
+              {certificates.map((cert, idx) => (
+                <Card 
+                  key={idx} 
+                  className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group"
+                  onClick={() => openCertificate(cert.title, cert.image)}
+                >
+                  <CardContent className="p-0">
+                    <div className={`aspect-[4/3] bg-gradient-to-br from-${cert.color}/10 to-${cert.color === 'primary' ? 'secondary' : 'primary'}/10 flex flex-col items-center justify-center p-8 relative`}>
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                        onError={(e) => e.currentTarget.style.display = 'none'}
+                      />
+                      <Icon name={cert.icon as any} className={`text-${cert.color} mb-4`} size={48} />
+                      <h4 className="text-xl font-semibold text-center mb-2">{cert.title}</h4>
+                      <p className="text-muted-foreground text-center text-sm">{cert.subtitle}</p>
+                      <div className="absolute bottom-4 right-4 w-8 h-8 bg-white/90 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                        <Icon name="Expand" className="text-primary" size={16} />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
+
+          {selectedCertificate && (
+            <div 
+              className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-in fade-in duration-200"
+              onClick={closeCertificate}
+            >
+              <div className="relative max-w-4xl w-full bg-white rounded-lg overflow-hidden animate-in zoom-in-95 duration-200">
+                <button
+                  onClick={closeCertificate}
+                  className="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors z-10"
+                >
+                  <Icon name="X" size={24} />
+                </button>
+                <div className="p-4">
+                  <h3 className="text-2xl font-bold text-center mb-4">{selectedCertificate.title}</h3>
+                  <img 
+                    src={selectedCertificate.image} 
+                    alt={selectedCertificate.title}
+                    className="w-full h-auto rounded"
+                    onError={(e) => {
+                      e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="600"%3E%3Crect fill="%23f0f0f0" width="800" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dy=".3em" fill="%23999" font-size="24"%3EФото сертификата будет добавлено%3C/text%3E%3C/svg%3E';
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
