@@ -76,6 +76,74 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-8">
+            <div className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              🎁 Специальное предложение
+            </div>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-foreground">
+              Пробное занятие бесплатно
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Познакомьтесь с преподавателем, узнайте свой уровень и получите персональные рекомендации
+            </p>
+          </div>
+
+          <Card className="border-2 border-primary/20 shadow-lg">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Video" className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Формат онлайн</h3>
+                    <p className="text-sm text-muted-foreground">Занятие проходит через видеосвязь в удобное время</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Clock" className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Длительность 30 минут</h3>
+                    <p className="text-sm text-muted-foreground">Достаточно для знакомства и оценки уровня</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="UserCheck" className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Индивидуальный подход</h3>
+                    <p className="text-sm text-muted-foreground">Определим ваш уровень и подберём программу</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Icon name="Gift" className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Полностью бесплатно</h3>
+                    <p className="text-sm text-muted-foreground">Никаких скрытых платежей и обязательств</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center pt-6 border-t">
+                <Button size="lg" className="text-lg px-8" asChild>
+                  <a href="#contact">Записаться на пробное занятие</a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <section id="about" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
