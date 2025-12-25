@@ -24,11 +24,19 @@ const Index = () => {
           <div className="text-2xl font-bold font-serif text-primary">
             Школа Корана
           </div>
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             <a href="#about" className="text-foreground hover:text-primary transition-colors">О преподавателе</a>
             <a href="#programs" className="text-foreground hover:text-primary transition-colors">Программы</a>
             <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Записаться</a>
+            <div className="flex gap-2 ml-4">
+              <a href="https://t.me/Ustaza_Tajvida" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all flex items-center justify-center">
+                <Icon name="Send" size={18} />
+              </a>
+              <a href="https://wa.me/79611262610" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-secondary/10 hover:bg-secondary hover:text-white transition-all flex items-center justify-center">
+                <Icon name="MessageCircle" size={18} />
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -305,6 +313,20 @@ const Index = () => {
                 <Button type="submit" className="w-full text-lg py-6">
                   Отправить заявку
                 </Button>
+                
+                <div className="text-center pt-4">
+                  <p className="text-sm text-muted-foreground mb-3">Или свяжитесь напрямую:</p>
+                  <div className="flex gap-3 justify-center">
+                    <a href="https://t.me/Ustaza_Tajvida" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary/10 hover:bg-primary hover:text-white transition-all">
+                      <Icon name="Send" size={20} />
+                      <span className="font-medium">Telegram</span>
+                    </a>
+                    <a href="https://wa.me/79611262610" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary/10 hover:bg-secondary hover:text-white transition-all">
+                      <Icon name="MessageCircle" size={20} />
+                      <span className="font-medium">WhatsApp</span>
+                    </a>
+                  </div>
+                </div>
               </form>
             </CardContent>
           </Card>
