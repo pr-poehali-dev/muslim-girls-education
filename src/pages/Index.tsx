@@ -69,20 +69,60 @@ const Index = () => {
 
       <section id="about" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-foreground">О преподавателе</h2>
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <div className="w-32 h-32 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Icon name="User" size={64} className="text-primary" />
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-foreground text-center">О преподавателе</h2>
+            <div className="bg-white rounded-lg p-8 md:p-12 shadow-sm">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex-shrink-0 mx-auto md:mx-0">
+                  <div className="w-32 h-32 bg-primary/20 rounded-full flex items-center justify-center">
+                    <Icon name="User" size={64} className="text-primary" />
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-2xl font-serif font-bold text-foreground mb-2">Муаллима ум Мадина</h3>
+                  <p className="text-lg text-muted-foreground mb-6">
+                    Ассаляму алейкум! Я — преподаватель Корана с большим опытом и любовью к своему делу.
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="GraduationCap" className="text-secondary" size={14} />
+                      </div>
+                      <p className="text-foreground">Окончила Мединский курс, 1 том</p>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="BookOpen" className="text-secondary" size={14} />
+                      </div>
+                      <p className="text-foreground">Обучается по программе Байна Ядайк</p>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="School" className="text-secondary" size={14} />
+                      </div>
+                      <p className="text-foreground">Обучается в Международном университете Корана шейхи Умм Малик</p>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Library" className="text-secondary" size={14} />
+                      </div>
+                      <p className="text-foreground">Обучается в институте Дироя</p>
+                    </div>
+                    
+                    <div className="flex items-start gap-3">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Icon name="Award" className="text-primary" size={14} />
+                      </div>
+                      <p className="text-foreground font-semibold">Более 1 года преподавательского опыта</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="text-lg text-foreground leading-relaxed mb-4">
-                Ассаляму алейкум! Я — преподаватель Корана с многолетним опытом обучения детей и взрослых. 
-                Имею иджазу по чтению Корана и специализируюсь на индивидуальном подходе к каждой ученице.
-              </p>
-              <p className="text-muted-foreground">
-                Моя цель — помочь каждой сестре освоить правильное чтение и понимание Священного Корана, 
-                создавая комфортную и уважительную атмосферу для обучения.
-              </p>
             </div>
           </div>
         </div>
