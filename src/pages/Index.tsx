@@ -308,6 +308,24 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground mb-6">Не нашли ответ на свой вопрос?</p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button size="lg" asChild>
+                <a href="https://t.me/Ustaza_Tajvida" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Icon name="Send" size={20} />
+                  Задать вопрос в Telegram
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="https://wa.me/79611262610" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Icon name="MessageCircle" size={20} />
+                  Написать в WhatsApp
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
