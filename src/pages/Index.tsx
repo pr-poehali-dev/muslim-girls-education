@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,57 @@ const Index = () => {
     phone: '',
     message: ''
   });
+
+  const [counters, setCounters] = useState({
+    students: 0,
+    satisfaction: 0,
+    lessons: 0
+  });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          animateCounters();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
+  const animateCounters = () => {
+    const duration = 2000;
+    const steps = 60;
+    const interval = duration / steps;
+
+    const targets = { students: 50, satisfaction: 95, lessons: 500 };
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+
+      setCounters({
+        students: Math.floor(targets.students * progress),
+        satisfaction: Math.floor(targets.satisfaction * progress),
+        lessons: Math.floor(targets.lessons * progress)
+      });
+
+      if (currentStep >= steps) {
+        setCounters(targets);
+        clearInterval(timer);
+      }
+    }, interval);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -144,11 +195,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section ref={statsRef} className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{counters.students}+</div>
               <p className="text-muted-foreground">Учениц обучается</p>
             </div>
             <div className="text-center">
@@ -156,11 +207,11 @@ const Index = () => {
               <p className="text-muted-foreground">Опыт преподавания</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">95%</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{counters.satisfaction}%</div>
               <p className="text-muted-foreground">Довольных учениц</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{counters.lessons}+</div>
               <p className="text-muted-foreground">Проведённых уроков</p>
             </div>
           </div>
