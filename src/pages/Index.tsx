@@ -173,10 +173,10 @@ const Index = () => {
 
                 <div className="border-t pt-6">
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-foreground">3000₽</span>
+                    <span className="text-3xl font-bold text-foreground">3500₽</span>
                     <span className="text-muted-foreground">/месяц</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-4">8 занятий по 60 минут</p>
+                  <p className="text-sm text-muted-foreground mb-4">8 занятий по 30 минут</p>
                   <Button className="w-full" asChild>
                     <a href="#contact">Выбрать программу</a>
                   </Button>
@@ -214,7 +214,7 @@ const Index = () => {
 
                 <div className="border-t pt-6">
                   <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-foreground">1500₽</span>
+                    <span className="text-3xl font-bold text-foreground">2000₽</span>
                     <span className="text-muted-foreground">/месяц</span>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">8 занятий по 60 минут</p>
