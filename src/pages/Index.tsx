@@ -413,6 +413,71 @@ const Index = () => {
               </CardContent>
             </Card>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-12">
+            <Card className="border-2 border-secondary bg-gradient-to-br from-secondary/5 to-primary/5">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center">
+                    <Icon name="BookOpen" className="text-secondary" size={24} />
+                  </div>
+                  <h3 className="text-3xl font-serif font-bold text-foreground">Тасхих 30 джуз (1 уровень)</h3>
+                </div>
+
+                <div className="bg-white/50 rounded-lg p-6 mb-6">
+                  <p className="text-lg font-semibold text-foreground mb-4">От ат-Тарик до ан-Нас</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-2">
+                      <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-foreground">Знать правила таджвида</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-foreground">Соблюдение Адаба к учителю и ученикам</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={18} />
+                      <span className="text-foreground">Выполнение домашнего задания</span>
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-4 pt-4 border-t">
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Устаза</p>
+                      <p className="font-semibold text-foreground">Умм Мадина</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Расписание</p>
+                      <p className="font-semibold text-foreground">Вт/Чт в 20:30</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Количество уроков</p>
+                      <p className="font-semibold text-foreground">25 уроков по 80 минут</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Количество студентов</p>
+                      <p className="font-semibold text-foreground">До 8 человек</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white rounded-lg p-6">
+                  <div>
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-4xl font-bold text-primary">5500₽</span>
+                      <span className="text-muted-foreground">за весь курс</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">220₽ за урок</p>
+                    <p className="text-sm font-semibold text-secondary mt-2">Старт: как наберется группа</p>
+                  </div>
+                  <Button size="lg" className="text-lg px-8" asChild>
+                    <a href="#contact">Записаться на курс</a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
