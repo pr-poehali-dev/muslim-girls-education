@@ -280,42 +280,70 @@ const Index = () => {
           <div className="max-w-4xl mx-auto mt-12">
             <h3 className="text-3xl font-serif font-bold text-center mb-8 text-foreground">Сертификаты и достижения</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8 relative">
+                    <img 
+                      src="/placeholder-certificate-1.jpg" 
+                      alt="Мединский курс" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => e.currentTarget.style.display = 'none'}
+                    />
                     <Icon name="Award" className="text-primary mb-4" size={48} />
                     <h4 className="text-xl font-semibold text-center mb-2">Мединский курс</h4>
                     <p className="text-muted-foreground text-center text-sm">Сертификат об окончании 1 тома</p>
+                    <p className="text-xs text-primary mt-4 opacity-70">Нажмите для загрузки фото</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8 relative">
+                    <img 
+                      src="/placeholder-certificate-2.jpg" 
+                      alt="Байна Ядайк" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => e.currentTarget.style.display = 'none'}
+                    />
                     <Icon name="BookOpen" className="text-secondary mb-4" size={48} />
                     <h4 className="text-xl font-semibold text-center mb-2">Байна Ядайк</h4>
                     <p className="text-muted-foreground text-center text-sm">Сертификат об окончании программы</p>
+                    <p className="text-xs text-secondary mt-4 opacity-70">Нажмите для загрузки фото</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8 relative">
+                    <img 
+                      src="/placeholder-certificate-3.jpg" 
+                      alt="Университет Корана" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => e.currentTarget.style.display = 'none'}
+                    />
                     <Icon name="GraduationCap" className="text-primary mb-4" size={48} />
                     <h4 className="text-xl font-semibold text-center mb-2">Университет Корана</h4>
                     <p className="text-muted-foreground text-center text-sm">Обучение у шейхи Умм Малик</p>
+                    <p className="text-xs text-primary mt-4 opacity-70">Нажмите для загрузки фото</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8 relative">
+                    <img 
+                      src="/placeholder-certificate-4.jpg" 
+                      alt="Институт Дироя" 
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity"
+                      onError={(e) => e.currentTarget.style.display = 'none'}
+                    />
                     <Icon name="Library" className="text-secondary mb-4" size={48} />
                     <h4 className="text-xl font-semibold text-center mb-2">Институт Дироя</h4>
                     <p className="text-muted-foreground text-center text-sm">Продолжающееся обучение</p>
+                    <p className="text-xs text-secondary mt-4 opacity-70">Нажмите для загрузки фото</p>
                   </div>
                 </CardContent>
               </Card>
