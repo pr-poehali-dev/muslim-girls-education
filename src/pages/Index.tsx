@@ -144,6 +144,29 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">50+</div>
+              <p className="text-muted-foreground">Учениц обучается</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">1+ год</div>
+              <p className="text-muted-foreground">Опыт преподавания</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">95%</div>
+              <p className="text-muted-foreground">Довольных учениц</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">500+</div>
+              <p className="text-muted-foreground">Проведённых уроков</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
