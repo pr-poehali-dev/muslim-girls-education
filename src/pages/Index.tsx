@@ -276,6 +276,51 @@ const Index = () => {
               </div>
             </div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-12">
+            <h3 className="text-3xl font-serif font-bold text-center mb-8 text-foreground">Сертификаты и достижения</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardContent className="p-0">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8">
+                    <Icon name="Award" className="text-primary mb-4" size={48} />
+                    <h4 className="text-xl font-semibold text-center mb-2">Мединский курс</h4>
+                    <p className="text-muted-foreground text-center text-sm">Сертификат об окончании 1 тома</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardContent className="p-0">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8">
+                    <Icon name="BookOpen" className="text-secondary mb-4" size={48} />
+                    <h4 className="text-xl font-semibold text-center mb-2">Байна Ядайк</h4>
+                    <p className="text-muted-foreground text-center text-sm">Сертификат об окончании программы</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardContent className="p-0">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary/10 flex flex-col items-center justify-center p-8">
+                    <Icon name="GraduationCap" className="text-primary mb-4" size={48} />
+                    <h4 className="text-xl font-semibold text-center mb-2">Университет Корана</h4>
+                    <p className="text-muted-foreground text-center text-sm">Обучение у шейхи Умм Малик</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+                <CardContent className="p-0">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-secondary/10 to-primary/10 flex flex-col items-center justify-center p-8">
+                    <Icon name="Library" className="text-secondary mb-4" size={48} />
+                    <h4 className="text-xl font-semibold text-center mb-2">Институт Дироя</h4>
+                    <p className="text-muted-foreground text-center text-sm">Продолжающееся обучение</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </section>
 
