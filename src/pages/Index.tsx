@@ -27,6 +27,7 @@ const Index = () => {
           <div className="hidden md:flex gap-6 items-center">
             <a href="#about" className="text-foreground hover:text-primary transition-colors">О преподавателе</a>
             <a href="#programs" className="text-foreground hover:text-primary transition-colors">Программы</a>
+            <a href="#faq" className="text-foreground hover:text-primary transition-colors">Вопросы</a>
             <a href="#reviews" className="text-foreground hover:text-primary transition-colors">Отзывы</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">Записаться</a>
             <div className="flex gap-2 ml-4">
@@ -222,6 +223,88 @@ const Index = () => {
                     <a href="#contact">Выбрать программу</a>
                   </Button>
                 </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-12 text-foreground">
+            Часто задаваемые вопросы
+          </h2>
+          
+          <div className="space-y-4">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Нужна ли предварительная подготовка?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">Нет, мы принимаем учениц с любым уровнем подготовки — от начинающих до продвинутых. Программа адаптируется под ваш уровень.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Как проходят онлайн-занятия?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">Занятия проходят в формате видеосвязи. Вам понадобится стабильный интернет, устройство с камерой и микрофоном. Мы используем удобные платформы для комфортного обучения.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Можно ли изменить график занятий?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">Для индивидуальных занятий график максимально гибкий — мы подберём удобное время. В групповых занятиях расписание фиксированное, но вы можете согласовать изменения заранее.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Как производится оплата?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">Оплата производится помесячно. Принимаем переводы на карту. После оплаты вы получаете доступ к занятиям на текущий месяц.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Что делать, если я пропустила занятие?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">При индивидуальных занятиях можно перенести урок, предупредив заранее. В групповых занятиях можно получить запись урока для самостоятельного изучения.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                    <Icon name="HelpCircle" className="text-primary" size={18} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground">Выдаётся ли сертификат?</h3>
+                </div>
+                <p className="text-muted-foreground ml-11">После успешного завершения программы обучения вы получите сертификат о прохождении курса чтения Корана с соблюдением правил таджвида.</p>
               </CardContent>
             </Card>
           </div>
